@@ -1,16 +1,20 @@
-#include "../GUI/Simple_window.h"
-#include "../GUI/Graph.h"
+/*
+g++ -w -Wall -std=c++11 ../GUI/Graph.cpp ../GUI/Window.cpp ../GUI/GUI.cpp ../GUI/Simple_window.cpp drill12.cpp fltk-config --ldflags --use-images -o main
+*/
+
+#include "./../GUI/Simple_window.h"
+#include "./../GUI/Graph.h"
 
 #include <string>
 #include <iostream>
-using namespace Graph_lib:
+using namespace Graph_lib;
 
 int main(){
     try{
 
         Point t1 {100, 100};
 
-        Simple_window_win {t1, 640, 400, "My window"};
+        Simple_window win {t1, 640, 400, "My window"};
 
         win.wait_for_button(); //vár addig amíg megnyomja a gombot
 
@@ -37,8 +41,8 @@ int main(){
         poly.add(Point{350,100});
         poly.add(Point{400,200});
 
-        poly.set_color{Color::red};
-        poly.set_style{Line_style::dash};
+        poly.set_color(Color::red);
+        poly.set_style(Line_style::dash);
         win.attach(poly);
         win.set_label("Draw polygon");
         win.wait_for_button();
