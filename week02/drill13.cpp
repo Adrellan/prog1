@@ -7,6 +7,7 @@ g++ -w -Wall -std=c++11 GUI/Graph.cpp GUI/Window.cpp GUI/GUI.cpp GUI/Simple_wind
 
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 
 using namespace Graph_lib;
 
@@ -47,6 +48,29 @@ int main(){
             kocka->set_fill_color(Color::red);
             win.attach(*kocka);
         }
+
+        win.wait_for_button();
+
+        Image kep1 (Point(200,0),"/home/adrian/prog1/week02/kep.jpg");
+        win.attach(kep1);
+        Image kep2 (Point(500,200),"/home/adrian/prog1/week02/kep.jpg");
+        win.attach(kep2);
+        Image kep3 (Point(100,500),"/home/adrian/prog1/week02/kep.jpg");
+        win.attach(kep3);
+
+        while (true)
+        {
+            int randx = rand() % 7 + 1;
+            randx *= 100; 
+            int randy = rand() % 7 + 1; 
+            randy *= 100; 
+            Image kep4 (Point(randx,randy),"/home/adrian/prog1/week02/kep.jpg");
+            kep4.set_mask(Point(0,0),100,100);
+            win.attach(kep4);
+            win.wait_for_button();
+        }
+        
+
 
         win.wait_for_button();
 
