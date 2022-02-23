@@ -16,10 +16,15 @@ Window::Window(Point xy, int ww, int hh, const string& title)
 	init();
 }
 
+void my_callback(Fl_Widget*, void*) {
+  exit(0);
+}
+
 void Window::init()
 {
-   resizable(this);
-   show();
+	callback(my_callback);
+    resizable(this);
+    show();
 } 
 
 void Window::draw()
