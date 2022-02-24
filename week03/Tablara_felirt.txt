@@ -1,0 +1,71 @@
+/*
+OSZTÁLY Emlős{
+    int lábak-száma         TULAJDONSÁGOK
+    int szőrzet
+    int súly
+    
+    void mozog(){           VISELKEDÉS
+        1 ->
+        2 ->
+        3 ->
+        4 ->
+    }
+
+    void hangot-ad(){
+        morog
+    }
+
+    abstract void szaporodik(){
+        (üres)              ABSZTRAKT FÜGGVÉNY (így az osztály is absztraktá válik)
+                            Így nem lehetséges pl az Emlős e;
+                            Ezt ugyanúgy öröklik az osztályok
+    }
+}
+
+Emlős e = new Eemlős(); 
+
+OSZTÁLY Kutya:Emlős{
+    Megörököl minden TULAJDONSÁGOT és VISELKEDÉST
+    string név
+    JÁTÉK KEDVENC.JÁTÉK
+
+    void mozog(){
+        1&2 - >
+        3&4 ->
+    }
+}
+
+OSZTÁLY Kenguru:Emlős{
+    int életkor
+    int ugrásmagasság
+
+    void mozog(){
+        1&2 ->              FELÜLÍRTUK A mozog() függvényt
+    }
+}
+
+Kenguru k;
+Emlős e = k;
+vek<eml> l;
+(kutya) l[0].mozog()
+(kengu) l[1].mozog()
+
+publicot    elérem bárhol
+protected   csak a saját/leszármazott osztályokban érhető el (mainben nem)
+private     csak a saját oszályban érhető el
+
+getter, setter -elérhetővé teszik a private cuccokat
+
+PUBLIIC int get.súly(){
+    return súly;
+}
+
+Emlős e;
+e.getsúly MKÖDIK
+
+Public void set_súly(int){
+    súly = 9;
+}
+
+e.set_súly(9);
+*/
