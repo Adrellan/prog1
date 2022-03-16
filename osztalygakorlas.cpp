@@ -92,7 +92,7 @@ int main(){
     Lany l;
     Crush c;
 
-    l = Lany("Daniella",19,1,0);
+    l = Lany("Daniella",19,1,1);
 
     cout << l.nev << " " << l.kor << " " << l.get_szinglie() << " " << l.get_szinglie() << endl;
     l.SetalniMegy();
