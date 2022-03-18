@@ -61,12 +61,12 @@ struct Crush:Lany{
 
 
 
-ostream& operator << (ostream& os, Lany l)
+ostream& operator << (ostream& os, Lany& l)
 {
     return os << l.nev << " " << l.kor << " " << l.get_szinglie() << endl;;
 }
 
-istream& operator >> (istream& is, Lany l){
+istream& operator >> (istream& is, Lany& l){
      string nev;
      int kor;
      bool single;
@@ -75,10 +75,6 @@ istream& operator >> (istream& is, Lany l){
      is >> nev >> kor >> single >> crushe;
      l.set_szinglie(single);
      l.set_crushe(crushe);
-
-    //nem tudom meghívni a c.SetalniMegy methodot
-
-     l.SetalniMegy();
      
      l=Lany(nev,kor,single,crushe);
      
@@ -92,9 +88,10 @@ int main(){
     Lany l;
     Crush c;
 
-    l = Lany("Daniella",19,1,1);
+    l = Lany("Daniella",19,0,0);
 
-    cout << l.nev << " " << l.kor << " " << l.get_szinglie() << " " << l.get_szinglie() << endl;
+    cout << l.nev << " " << l.kor << " " << l.get_szinglie() << " " << l.get_crushe() << endl;
+    c.set_szinglie(l.get_szinglie());
     l.SetalniMegy();
     c.SetalniMegy();
 
@@ -102,6 +99,7 @@ int main(){
     Lany l3;
 
     cin >> l2 >> l3;
+    cout << l2 << " " << l3;
 
     return 0;
 }
