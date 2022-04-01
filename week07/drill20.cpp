@@ -88,5 +88,14 @@ int main(){
     print(vi2);
     print(li2);
 
+    vector<int>::iterator vit;
+    vit = find(vi2.begin(), vi2.end(),3);
+
+    if(vit != vi2.end()){
+        cout << "Found at: " << distance(vi2.begin(), vit) << endl;
+    }else{
+        cout << "Not found" << endl;
+    }
+
     return 0;
 }

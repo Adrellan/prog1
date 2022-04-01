@@ -7,6 +7,7 @@ using namespace std;
 template<typename T>
 struct S {
     S (T vv = 0) : val{vv}{}
+    T& get();
     const T& get() const;                   //valahol lesz egy get() függvény, amit máshol definiálunk
     void set(T new_t) { val = new_t; };
     void operator=(const T& s);
@@ -102,6 +103,8 @@ int main(){
     vector<int> vi2;
     read_val(vi2);
     S<vector<int>> svi2 {vi2};
+
+    cout << "S<vector<int>> svi2: " << svi2.get() << endl;
 
     return 0;
 }
