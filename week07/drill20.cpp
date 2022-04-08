@@ -49,7 +49,6 @@ int main(){
         cout << t2[i] << " ";
     }*/
 
-
     constexpr int size = 10;
 
     int arr[size];
@@ -72,7 +71,7 @@ int main(){
     print(vi);
     print(li);
 
-
+    //növeljük az elemek értékét
     inc(ai,2);
     inc(vi,3);
     inc(li,5);
@@ -88,6 +87,7 @@ int main(){
     print(vi2);
     print(li2);
 
+    //3-as értéket keressük
     vector<int>::iterator vit;
     vit = find(vi2.begin(), vi2.end(),3);
 
@@ -96,6 +96,17 @@ int main(){
     }else{
         cout << "Not found" << endl;
     }
-
+    
+    //27-es értéket keressük
+	vector<int>::iterator vit2;
+	vit2 = std::find(vi2.begin(), vi2.end(), 27);
+	
+    if( vit2 != vi2.end()){
+		cout << "Found at " << distance(vi2.begin(), vit2) << endl;
+	}
+	else {
+		cout << "Not found" << endl;
+	}
+		
     return 0;
 }
