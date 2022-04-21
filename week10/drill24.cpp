@@ -104,7 +104,7 @@ int main()
         {
             for (int j = 1; j <= m; j++)
             {
-                m3(i-1,j-1)=i*j;
+                m3(i - 1, j - 1) = i * j;
             }
         }
 
@@ -112,27 +112,49 @@ int main()
         {
             for (int j = 0; j < m; j++)
             {
-                cout << m3(i,j) << "\t";
+                cout << m3(i, j) << "\t";
             }
             cout << endl;
         }
 
         Matrix<complex<double>> mcomp(10);
+
         cout << "\nEnter 10 complex number (Re Im):\n";
         complex<double> comp;
         for (int i = 0; i < 10; ++i)
         {
             cin >> comp;
-            if (!cin) throw runtime_error("Problem reading complex number");
+            if (!cin)
+                throw runtime_error("Problem reading complex number");
             mcomp[i] = comp;
         }
+
         complex<double> sum;
         for (Index i = 0; i < mcomp.size(); ++i)
         {
             sum += mcomp[i];
         }
         cout << "sum: " << sum << '\n';
-        
+
+        Matrix<int, 2> mx(2, 3);
+
+        cout << "Please, enter 6 number" << endl;
+        for (int i = 0; i < 2; ++i)
+        {
+            for (int j = 0; j < 3; ++j)
+            {
+                cin >> mx(i, j);
+            }
+        }
+        cout << endl;
+        for (int i = 0; i < 2; ++i)
+        {
+            for (int j = 0; j < 3; ++j)
+            {
+                cout << mx(i, j) << " ";
+            }
+            std::cout << std::endl;
+        }
     }
     catch (exception &e)
     {
