@@ -54,11 +54,11 @@ int main(){
 
         print(msi);
 
-        msi.erase("a");                     // 'a' elem törlése
+        msi.erase("a");                      // 'a' elem törlése
         cout << endl;
         print(msi);
 
-        msi.erase(msi.begin(),msi.end());  // msi törlése elejétől a végéig
+        msi.erase(msi.begin(),msi.end());   // msi törlése elejétől a végéig
         cout << endl;
         print(msi);
 
