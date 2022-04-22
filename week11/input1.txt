@@ -1,0 +1,10 @@
+kenyér 1 45.0
+tej 2 69
+monster 3 25.25
+gin 6 88
+kőbányai 5 37.5
+szonda 7 420
+várda 4 78
+snüssz 9 25
+geekbar 12 6
+csévi 8 10.26
