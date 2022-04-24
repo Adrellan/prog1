@@ -70,8 +70,6 @@ int main(){
             win.wait_for_button();
         }
         
-
-
         win.wait_for_button();
 
     }catch(exception& e){
